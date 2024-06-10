@@ -1,0 +1,9 @@
+<label *ngIf="!simple" id="sel-toggle" class="toggle-container" (click)="onToggle($event)">
+  <input class="toggle-slider" type="checkbox" [ngClass]="{ 'toggle-active': active }">
+  <span class="toggle-background"></span>
+</label>
+
+<div *ngIf="simple" id="sel-toggle" class="simple-toggle" (click)="onToggle($event)">
+  <img *ngIf="active" class="hover-effect" src="./assets/images/components/toggle/active.svg" alt="Active Toggle">
+  <img *ngIf="!active" class="hover-effect" src="./assets/images/components/toggle/active.svg" alt="Inactive Toggle">
+</div>

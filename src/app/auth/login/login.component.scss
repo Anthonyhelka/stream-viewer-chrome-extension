@@ -1,0 +1,64 @@
+@import '../../globals/colors.scss';
+
+.login-container {
+  padding: 0 25px;
+  .login-username {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .login-password {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    border: 1px solid $stroke-gray;
+    border-radius: 4px;
+    background-color: $box-bg-gray;
+    overflow: hidden;
+    input {
+      flex-grow: 1;
+      margin: 0 10px 0 0 !important;
+      border: none !important;
+      border-radius: 0 !important;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .login-extras {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    app-toggle {
+      margin-right: 10px;
+    }
+    div {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: $text-dark-gray;
+    }
+  }
+  .login-social-container {
+    .login-social-header {
+      padding-bottom: 10px;
+      font-weight: 600;
+      line-height: 20px;
+      color: $text-dark-gray;
+    }
+    .login-social-items {
+      margin-bottom: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+      }
+      img:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<div class="login-container">
+  <input
+    id="sel-usernameInput"
+    class="login-username"
+    type="text"
+    placeholder="Email or username"
+    [(ngModel)]="username"
+    maxlength="64"
+    (keyup)="authService.username.next($event.target.value)">
+
+  <div class="login-password">
+    <input
+      id="sel-passwordInput"
+      [type]="showPassword ? 'text' : 'password'"
+      placeholder="Password"
+      [(ngModel)]="password"
+      maxlength="512"
+      (keyup)="authService.password.next($event.target.value)">
+    <img *ngIf="!showPassword" class="hover-effect" src="./assets/images/components/login/show-password.svg" alt="Show Password" (click)="showPassword = true">
+    <img *ngIf="showPassword" class="hover-effect" src="./assets/images/components/login/hide-password.svg" alt="Hide Password" (click)="showPassword = false">
+  </div>
+
+  <div class="login-extras">
+    <app-toggle [simple]="true" (toggle)="onToggleRememberMe($event)" [active]="rememberMe"></app-toggle>
+    <div>Remember me</div>
+  </div>
+
+  <div class="login-social-container">
+    <div class="login-social-header">or log in using:</div>
+    <div class="login-social-items">
+      <img class="hover-effect" src="./assets/images/components/login/discord.svg" alt="Discord Log In" (click)="loginDiscord()" />
+      <img class="hover-effect" src="./assets/images/components/login/twitch.svg" alt="Twitch Log In" (click)="loginTwitch()" />
+      <img class="hover-effect" src="./assets/images/components/login/trovo.svg" alt="Trovo Log In" (click)="loginTrovo()" />
+      <img class="hover-effect" src="./assets/images/components/login/youtube.svg" alt="YouTube Log In" (click)="loginYoutube()" />
+      <img class="hover-effect" src="./assets/images/components/login/facebook.svg" alt="Facebook Log In" (click)="loginFacebook()"/>
+    </div>
+</div>

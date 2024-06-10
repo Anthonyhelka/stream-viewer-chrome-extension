@@ -1,0 +1,32 @@
+<div class="auth-container" (keyup.enter)="onLogin()" tabindex="0">
+  <app-loading-spinner *ngIf="loading" type="single-circle"></app-loading-spinner>
+
+  <div class="auth-header">Welcome Back</div>
+  <div class="auth-message">Log into your account below.</div>
+
+  <div class="auth-navigation">
+    <div
+      class="auth-navigation-button"
+      [ngClass]="{ 'auth-navigation-button-active': view === 'login', 'hover-effect': view !== 'login' }"
+      (click)="onNavigate('login')">Log in</div>
+
+    <div
+      class="auth-navigation-button"
+      [ngClass]="{ 'auth-navigation-button-active': view === 'register', 'hover-effect': view !== 'register' }"
+      (click)="onNavigate('register')">Sign up</div>
+  </div>
+
+  <div class="auth-divider"></div>
+
+  <div class="auth-content">
+    <app-login *ngIf="view === 'login'"></app-login>
+  </div>
+
+  <div class="auth-divider"></div>
+
+  <div *ngIf="errorMessage !== ''" class="auth-error-message message red">{{ errorMessage }}</div>
+
+  <div class="auth-submit">
+    <button *ngIf="view === 'login'" id="sel-loginButton" class="blue-btn" (click)="onLogin()">Log In</button>
+  </div>
+</div>

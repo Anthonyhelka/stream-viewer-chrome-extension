@@ -1,0 +1,109 @@
+@import 'src/app/globals/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+body {
+  width: 400px;
+  min-height: 500px;
+  margin: 0;
+  background-color: $dark-background;
+  color: #FFFFFF;
+  font-family: rajdhani, serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $stroke-gray;
+}
+.hidden-scroll::-webkit-scrollbar {
+  width: 0 !important;
+}
+@font-face {
+  font-family: rajdhani;
+}
+
+a {
+  color: $sky-blue;
+  cursor: pointer;
+  transition: 0.3s;
+}
+b {
+  color: $sky-blue !important;
+}
+a:hover {
+  color: $sky-blue;
+  opacity: 0.7;
+  text-decoration: none;
+}
+*:focus {
+  outline: none !important;
+}
+*:disabled {
+  cursor: not-allowed;
+  opacity: 1 !important;
+}
+.disabledDiv {
+  cursor: not-allowed !important;
+  opacity: 1 !important;
+}
+
+.hover-effect {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.hover-effect:hover {
+  opacity: 0.7;
+}
+ // div
+div {
+  box-sizing: border-box;
+}
+
+// Input
+input {
+  height: 50px;
+  background-color: $input-gray;
+  border: 1px solid $stroke-gray;
+  border-radius: 4px;
+  padding: 0 20px;
+  font-family: rajdhani, serif;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+// Button
+button {
+  border-radius: 5px;
+  font-family: rajdhani, serif;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 45px;
+  font-weight: 500;
+}
+button:hover {
+  opacity: 0.7;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 1;
+}
+.gray-inverted-btn {
+  background: transparent;
+  border: 1px solid $stroke-gray;
+  color: $text-gray;
+}
+.blue-btn {
+  background: $sky-blue;
+  border: 1px solid $sky-blue;
+  color: white;
+}
+
+.red {
+  color: $main-red;
+}

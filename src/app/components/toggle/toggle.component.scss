@@ -1,0 +1,58 @@
+@import 'src/app/globals/colors.scss';
+
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 15px;
+  .toggle-slider {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-background {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $stroke-gray;
+    transition: 0.4s;
+    border-radius: 7.5px;
+  }
+  .toggle-background:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    bottom: -3px;
+    right: 25px;
+    background-color: $text-muted-gray;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  .toggle-active + .toggle-background {
+    background-color: #1E6997;
+  }
+  .toggle-active:focus + .toggle-background {
+    box-shadow: 0 0 1px $sky-blue;
+  }
+  .toggle-active + .toggle-background:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: $sky-blue;
+  }
+}
+
+.simple-toggle {
+  width: 20px;
+  height: 24px;
+  border-radius: 3px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "StreamViewer",
+  "version": "1.0",
+  "description": "The official companion extension for StreamViewer!",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "chrome",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js",
+      "runtime.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "StreamViewer",
+    "default_icon": {
+      "16": "/assets/images/streamViewer/logo.png",
+      "32": "/assets/images/streamViewer/logo.png",
+      "48": "/assets/images/streamViewer/logo.png",
+      "128": "/assets/images/streamViewer/logo.png"
+    }
+  },
+  "icons": {
+    "16": "/assets/images/streamViewer/logo.png",
+    "48": "/assets/images/streamViewer/logo.png",
+   "128": "/assets/images/streamViewer/logo.png"
+  }
+}
